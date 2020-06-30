@@ -4,10 +4,8 @@
 
 const numberField = document.querySelector('.js-input');
 const button = document.querySelector('.js-button');
-const hintField = document.querySelector('js-hint');
-//const hintText = hintField.innerHTML;
-const attemptsField = document.querySelector('js-attempts');
-//const attemptsNumber = attemptsField.innerHTML;
+const hintField = document.querySelector('.js-hint');
+const attemptsField = document.querySelector('.js-attempts');
 
 //Función num. aleatorio
 let randomNumber;
@@ -17,16 +15,24 @@ function getRandomNumber(max) {
 }
 console.log(getRandomNumber(100));
 
-//Función comparar
 function checkGuessNumber() {
     let guessNumber = parseInt(numberField.value);
-    console.log(`Esto es lo que he escrito ${numberField.value}`);
-    console.log(`Este es el número aleatorio: ${randomNumber}`);
-    console.log(guessNumber);
-    console.log(randomNumber);
     if (guessNumber === randomNumber) {
-        console.log('¡HURRA!');
+        hintField.innerHTML = '¡Has ganado campeona!';
+    } else if (guessNumber > randomNumber) {
+        hintField.innerHTML = 'Demasiado alto, prueba otra vez';
+    } else if (guessNumber < randomNumber) {
+        hintField.innerHTML = 'Demasiado bajo, prueba otra vez';
+    } else if (guessNumber > 100 || guessNumber < 0) {
+        hintField.innerHTML = 'El número que buscamos está entre 0 y 100';
     }
+}
+
+function numOfAttempts(checkGuessNumber) {
+    let numOfAttempts = 0;
+    console.log(numOfAttempts);
+    numOfAttempts += numOfAttempts;
+    attemptsField.innerHTML = numOfAttempts;
 }
 
 button.addEventListener('click', checkGuessNumber);
