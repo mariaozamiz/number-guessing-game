@@ -5,34 +5,38 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Evaluación intermedia - Módulo 2</title>
         <link
-            href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap"
             rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap"
         />
-        <link rel="stylesheet" href="./assets/css/main.css"
+        <link rel="stylesheet" href="./assets/css/reset.css" />
+        <link rel="stylesheet" href="./assets/css/main.css" />
     </head>
-    <body class="body">
+    <body class="body wrapper">
         <h1 class="title">Adivina el número</h1>
 
         <h2 class="intro__text">
-            ¿Cuántos intentos necesitas para adivinar el número que este código
-            ha generado por azar?
+            <span>Estoy pensando en un número... 🤔</span>
+            <span>¡a ver si adivinas cuál es!</span>
         </h2>
 
         <form action="" class="form">
             <label for="numberGuess" class="label">
-                Introduce aquí tu número
+                Escríbelo aquí 👇
                 <input
                     id="numberGuess"
                     name="numberGuess"
                     type="number"
                     class="input js-input"
-                    placeholder="ej: 8"
+                    placeholder="ejemplo: 8"
                 />
             </label>
             <button class="button js-button">¡Prueba!</button>
         </form>
         <p class="hint__text js-hint"></p>
-        <p class="attempts">Contador de intentos</p>
+        <p class="attempts">
+            <span>Contador de intentos</span>
+            <span class="italic">(tranqui, no es un examen)</span>
+        </p>
         <div class="attempts__container">
             <p class="attempts__text js-attempts"></p>
         </div>

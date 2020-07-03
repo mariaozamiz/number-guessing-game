@@ -9,21 +9,46 @@ html {
     background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
-    margin-top: 70px;
+    margin-top: 30px;
     align-items: center;
     height: 100vh;
+    text-align: center;
+}
+.wrapper {
+    margin-left: 30px;
+    margin-right: 30px;
+
+    @media all and (min-width: 768px) {
+        margin-left: 80px;
+        margin-right: 80px;
+    }
 }
 
 .title {
     font-family: 'Varela Round', sans-serif;
-    font-size: 80px;
+    font-size: 60px;
+    line-height: 60px;
     text-shadow: 7px 5px 0px #386dcf;
-    margin-bottom: 5px;
-}
+    margin-bottom: 10px;
 
+    @media all and (min-width: 768px) {
+        font-size: 80px;
+        line-height: 80px;
+        margin-bottom: 20px;
+    }
+}
 .intro__text {
     font-family: 'Varela Round', sans-serif;
-    margin-bottom: 60px;
+    margin-bottom: 45px;
+
+    & span {
+        display: block;
+    }
+
+    @media all and (min-width: 768px) {
+        font-size: 30px;
+        line-height: 30px;
+    }
 }
 
 .label {
@@ -66,8 +91,8 @@ html {
 }
 
 .attempts {
-    &__text {
-        font-size: 20px;
+    & p {
+        font-size: 24px;
     }
 
     &__container {
@@ -80,4 +105,12 @@ html {
         align-items: center;
         text-align: center;
     }
+    & span {
+        display: block;
+    }
+}
+
+.italic {
+    font-style: italic;
+    font-size: 14px;
 }
