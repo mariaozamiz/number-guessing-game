@@ -8,7 +8,6 @@
             rel="stylesheet"
             href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap"
         />
-        <link rel="stylesheet" href="./assets/css/reset.css" />
         <link rel="stylesheet" href="./assets/css/main.css" />
     </head>
     <body class="body wrapper">
@@ -26,19 +25,22 @@
                     id="numberGuess"
                     name="numberGuess"
                     type="number"
-                    class="input js-input"
-                    placeholder="ejemplo: 8"
+                    class="input js__input"
+                    placeholder="por ejemplo, 8"
                 />
             </label>
-            <button class="button js-button">¡Prueba!</button>
+            <div class="hint__container">
+                <p class="hint__text js__hint"></p>
+            </div>
+            <button type="submit" class="button js__button">¡Prueba!</button>
         </form>
-        <p class="hint__text js-hint"></p>
+
         <p class="attempts">
             <span>Contador de intentos</span>
-            <span class="italic">(tranqui, no es un examen)</span>
+            <span class="italic">(no pressure)</span>
         </p>
         <div class="attempts__container">
-            <p class="attempts__text js-attempts"></p>
+            <p class="attempts__text js__attempts"></p>
         </div>
         <script type="text/javascript" src="./assets/js/main.js"></script>
     </body>

@@ -1,35 +1,52 @@
 'use strict';
 
 //Access to HTML
+const numberField = document.querySelector('.js__input');
+const button = document.querySelector('.js__button');
+const hintField = document.querySelector('.js__hint');
 
-const numberField = document.querySelector('.js-input');
-const button = document.querySelector('.js-button');
-const hintField = document.querySelector('.js-hint');
-const attemptsField = document.querySelector('.js-attempts');
-
-//Función num. aleatorio
+//Create a random number
 let randomNumber;
 function getRandomNumber(max) {
     randomNumber = Math.ceil(Math.random() * max);
     return randomNumber;
 }
-console.log(getRandomNumber(100));
 
+// Check guess number
+let guessNumber;
+function checkGuessNumber(ev) {
+    ev.preventDefault();
+    guessNumber = parseInt(numberField.value);
+    if (!guessNumber) {
+        hintField.innerHTML = 'Venga, ¡escribe un número!';
+    } else {
+        counterUp(ev);
+        printMessage(guessNumber);
+    }
+}
+
+// Increment counter
 let attempts = 0;
-
-function checkGuessNumber() {
+function counterUp() {
+    const attemptsField = document.querySelector('.js__attempts');
     attempts++;
-    let guessNumber = parseInt(numberField.value);
+    attemptsField.innerHTML = `${attempts}`;
+}
+
+function printMessage() {
     if (guessNumber === randomNumber) {
-        hintField.innerHTML = '¡Has ganado campeona!';
+        hintField.innerHTML = '🎉¡HAS ACERTADO! 🎉';
     } else if (guessNumber > 100 || guessNumber < 0) {
-        hintField.innerHTML = 'El número que buscamos está entre 0 y 100';
+        hintField.innerHTML = '¡Pista! El número está entre 0 y 100';
     } else if (guessNumber > randomNumber) {
         hintField.innerHTML = 'Demasiado alto, prueba otra vez';
     } else if (guessNumber < randomNumber) {
         hintField.innerHTML = 'Demasiado bajo, prueba otra vez';
     }
-    attemptsField.innerHTML = `${attempts}`;
 }
 
-button.addEventListener('click', checkGuessNumber());
+//Function calling
+getRandomNumber(100);
+
+//Event listener
+button.addEventListener('click', checkGuessNumber);
