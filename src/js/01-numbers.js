@@ -29,7 +29,7 @@ function checkGuessNumber() {
     } else if (guessNumber < randomNumber) {
         hintField.innerHTML = 'Demasiado bajo, prueba otra vez';
     }
-    attemptsField.innerHTML = `Llevas ${attempts} intento/s`;
+    attemptsField.innerHTML = `${attempts}`;
 }
 
-button.addEventListener('click', checkGuessNumber);
+button.addEventListener('click', checkGuessNumber());

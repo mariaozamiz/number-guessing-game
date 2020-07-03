@@ -4,22 +4,31 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Evaluación intermedia - Módulo 2</title>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap"
+            rel="stylesheet"
+        />
         <link rel="stylesheet" href="./assets/css/main.css"
     </head>
     <body class="body">
         <h1 class="title">Adivina el número</h1>
-        <label for="numberGuess" class="label">
-            Introduce aquí tu número
-            <input
-                id="numberGuess"
-                name="numberGuess"
-                type="number"
-                class="input js-input"
-            />
-        </label>
+        <form action="" class="form">
+            <label for="numberGuess" class="label">
+                Introduce aquí tu número
+                <input
+                    id="numberGuess"
+                    name="numberGuess"
+                    type="number"
+                    class="input js-input"
+                />
+            </label>
+            <button class="button js-button">¡Prueba!</button>
+        </form>
         <p class="hint__text js-hint"></p>
-        <p class="attempts__text js-attempts"></p>
-        <button class="button js-button">Prueba</button>
+        <p class="attempts">Contador de intentos</p>
+        <div class="attempts__container">
+            <p class="attempts__text js-attempts"></p>
+        </div>
         <script type="text/javascript" src="./assets/js/main.js"></script>
     </body>
 </html>
