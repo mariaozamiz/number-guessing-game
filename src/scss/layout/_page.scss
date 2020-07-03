@@ -1,5 +1,6 @@
 html {
     font-family: Arial, Helvetica, sans-serif;
+    color: white;
 }
 .body {
     background: #6190e8;
@@ -15,15 +16,19 @@ html {
 
 .title {
     font-family: 'Varela Round', sans-serif;
-    font-size: 60px;
-    color: white;
+    font-size: 80px;
     text-shadow: 7px 5px 0px #386dcf;
+    margin-bottom: 5px;
+}
+
+.intro__text {
+    font-family: 'Varela Round', sans-serif;
+    margin-bottom: 60px;
 }
 
 .label {
     font-size: 18px;
     line-height: 18px;
-    color: white;
 }
 
 .form {
@@ -34,8 +39,14 @@ html {
     display: block;
     border: none;
     border-radius: 5px;
-    padding-bottom: 10px;
     margin: 10px auto 40px auto;
+    height: 30px;
+    line-height: 30px;
+}
+
+::placeholder {
+    text-align: left;
+    padding-left: 5px;
 }
 
 .button {
@@ -55,11 +66,8 @@ html {
 }
 
 .attempts {
-    color: white;
-
     &__text {
         font-size: 20px;
-        color: white;
     }
 
     &__container {
