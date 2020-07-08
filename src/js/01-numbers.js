@@ -17,9 +17,9 @@ function checkGuessNumber(ev) {
     ev.preventDefault();
     guessNumber = parseInt(numberField.value);
     if (!guessNumber) {
-        hintField.innerHTML = 'Venga, ¡escribe un número!';
+        updateHint('Venga, ¡escribe un número!');
     } else {
-        counterUp(ev);
+        counterUp();
         printMessage(guessNumber);
     }
 }
@@ -51,10 +51,8 @@ function counterUp() {
     attemptsField.innerHTML = `${attempts}`;
 }
 
-//Function calling
-getRandomNumber(100);
-
 //Event listener
 button.addEventListener('click', checkGuessNumber);
 
-console.log(randomNumber);
+//Function calling
+getRandomNumber(100);
