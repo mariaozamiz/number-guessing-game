@@ -1,3 +1,135 @@
-@import 'core/reset';
-@import 'layout/page';
-@import 'pages/index';
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+.body {
+    background: #6190e8;
+    background: -webkit-linear-gradient(to top, #a7bfe8, #6190e8);
+    background: linear-gradient(to top, #a7bfe8, #6190e8);
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+.wrapper {
+    margin-left: 30px;
+    margin-right: 30px;
+
+    @media all and (min-width: 768px) {
+        margin-left: 80px;
+        margin-right: 80px;
+    }
+}
+
+.title {
+    font-family: 'Varela Round', sans-serif;
+    font-size: 60px;
+    line-height: 60px;
+    text-shadow: 7px 5px 0px #386dcf;
+    margin-bottom: 10px;
+
+    @media all and (min-width: 768px) {
+        font-size: 80px;
+        line-height: 80px;
+        margin-bottom: 20px;
+    }
+}
+.intro__text {
+    font-family: 'Varela Round', sans-serif;
+    margin-bottom: 45px;
+
+    & span {
+        display: block;
+    }
+
+    @media all and (min-width: 768px) {
+        font-size: 30px;
+        line-height: 30px;
+    }
+}
+
+.label {
+    font-size: 18px;
+    line-height: 18px;
+}
+
+.form {
+    text-align: center;
+}
+
+.input {
+    display: block;
+    border: none;
+    border-radius: 5px;
+    margin: 10px auto 40px auto;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    color: grey;
+}
+
+::placeholder {
+    text-align: center;
+    color: lightgrey;
+}
+
+.hint__container {
+    height: 60px;
+}
+
+.button {
+    max-width: 300px;
+    font-family: 'Varela Round', sans-serif;
+    text-transform: uppercase;
+    font-size: 18px;
+    color: #386dcf;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 5px 5px 0px #386dcf;
+    margin-bottom: 30px;
+}
+
+.button:focus {
+    outline: 0;
+}
+
+.button:active {
+    transform: translate(2px, 2px);
+}
+
+.hint__text {
+    color: rgb(243, 212, 74);
+    font-size: 18px;
+    padding: 5px 5px;
+    margin-top: -20px;
+}
+
+.attempts {
+    & p {
+        font-size: 24px;
+    }
+
+    &__container {
+        border: 1px solid white;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    & span {
+        display: block;
+    }
+}
+
+.italic {
+    font-style: italic;
+    font-size: 14px;
+}
